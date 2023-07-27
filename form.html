@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tailor Shop Contact Form</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+    
+    .form-container {
+      background-color: #ffffff;
+      padding: 20px;
+      margin: 50px auto;
+      width: 80%;
+      max-width: 600px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+    }
+    
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .form-container input[type=text],
+    .form-container input[type=email],
+    .form-container input[type=number],
+    .form-container input[type=tel],
+    .form-container textarea {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 4px;
+      margin-bottom: 15px;
+      resize: vertical;
+    }
+    
+    .form-container input[type=submit] {
+      background-color: #4CAF50;
+      color: #ffffff;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    
+    .form-container input[type=submit]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Tailor Shop Contact Form</h2>
+    <form id="getformvalue">
+      <label for="name">ItemName:</label>
+      <input type="text"  id="itemid" name="name" placeholder="Enter your name..." required readonly>
+
+      <!-- <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name..." required> -->
+      
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email address..." required>
+      
+      <label for="phone">Phone Number:</label>
+      <input type="number" id="phone" name="phone" placeholder="Enter your phone number...">
+      
+      <label for="handlength">Hand-length:</label>
+      <input type="number" id="handlength" name="hand-width" placeholder="Enter your hand-width">
+      
+      <label for="handwidth">Hand-width</label>
+      <input type="number" id="handwidth" name="hand-width" placeholder="Enter your hand-width">
+      
+      <label for="bodylength">body-length</label>
+      <input type="number" id="bodylength" name="total body-length" placeholder="Enter your total body-length">
+      
+      <label for="bodywidth">Total body-width</label>
+      <textarea id="number" id="bodywidth" name="bodywidth" placeholder="Enter your body width"></textarea>
+
+      <label for="shoulde2rlength">shoulder-length</label>
+      <textarea id="number" id="shoulderlength" name="shoulderlength" placeholder="Enter your shoulder-length"></textarea>
+
+      <label for="neckwidth">Neck-width</label>
+      <textarea id="number" id="neckwidth" name="neckwidth" placeholder="Enter your neck width"></textarea>
+      
+      <button type="submit">Send Message</button>
+    </form>
+    <p id="dinesh"></p>
+  </div>
+  <script  src="./Javascript/form.js"></script>
+</body>
+</html>

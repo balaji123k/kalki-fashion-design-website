@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    var arr={}
+async function fetch1()
+{
+    await fetch('http://localhost:3000/fetch1',{
+        method:"get",
+    })
+    .then((res)=>res.json())
+    .then((data)=>{
+        arr=data.data
+        console.log(arr)
+        document.getElementById("data1").innerHTML=data.data.map(getvalue)
+    })
+}
+function getvalue(item)
+{
+    return ["<br>","ItemName : "+item.name,"<br>","User Mobilenumber : "+item.phone,"<br>","Email : "+item.email,"<br>","Handlength : "+item.handlength,"<br>","Handwidth : "+item.handwidth,"<br>","bodylength : "+item.bodylength,"<br>","bodywidth : "+item.bodywidth,"<br>","shoulderlength : "+item.shoulderlength,"<br>","neckwidth : "+item.neckwidth,"<br>","-----------------------------------------"].join(" ")
+}
+    window.addEventListener("load",fetch1);
+
+    
+
+</script>
+<body>
+    <h1 style="text-align: center;">Tailoring</h1>
+    <p style="text-align: center; font-weight: 700; font-size: 20px;" id="data1">hfv</p>
+</body>
+</html>
